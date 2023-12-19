@@ -1,7 +1,7 @@
 //const cubism2Model =
 //"https://cdn.jsdelivr.net/gh/guansss/pixi-live2d-display/test/assets/shizuku/shizuku.model.json";
 const cubism4Model =
-"../KusoProf/KusoProf.model3.json";
+"./KusoProf/KusoProf.model3.json";
 const live2d = PIXI.live2d;
 
 const volBuffer = [];
