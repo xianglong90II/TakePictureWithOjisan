@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>和猥琐大叔合影</title>
+    <link rel="Shortcut Icon" href="./ico/webpageico.ico">
+    <link rel="stylesheet" href="./pixi-live2d-display/dist/Engine/normalize.min.css">
+    <link rel="stylesheet" href="./style/ctrlpannel.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .nav {
+            display: flex;
+            height: 60px;
+            justify-content: space-between;
+            border-bottom: rgb(43, 43, 43) solid 2px;
+            background-color: whitesmoke;
+            box-shadow: 0px 3px rgba(0, 0, 0, .1);
+        }
+        .githublink {
+            width: 70px;
+            border-right: rgb(43, 43, 43) solid 2px;
+        }
+        .nav .githublink a {
+            text-decoration: none;
+            color: rgb(43, 43, 43);
+        }
+        .nav .githublink a img{
+            height: 50px;
+            border-radius: 25px;
+            margin: 5px;
+        }
+        .title {
+            flex: 1;
+            text-align: center;
+            line-height: 60px;
+            font-size: 30px;
+            font-family:'黑体';
+        }
+        .linkdescription {
+            opacity: 0;
+            width: 140%;
+            height: 0;
+            text-align: center;
+            line-height: 50px;
+            font-size: 16px;
+            color: rgb(119, 48, 19);
+            border-radius: 5%;
+            background-color: rgb(255, 213, 150);
+            border: rgba(119, 48, 19, 0.4) solid 2px;
+        }
+        .nav .githublink:hover .linkdescription{
+            height: 50px;
+            opacity: 1;
+            transform-origin: top;
+            transform: scaleY(1); 
+            transition: opacity 0.7s ease; 
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="githublink">
+            <a href="https://github.com/xianglong90II" target="_blank"><img src="./images/150pxprof.png" alt="">
+                <div class="linkdescription">GitHub</div></a>
+        </div>
+        <div class="title">和猥琐大叔合影</div>
+    </div>
+    <div id="controlPanel">
+        <ul id="list">
+          <!-- <li><button class="controlBtn" id="changeBackgroundBtn" onclick="changeBackground()" display="none">变换背景</button> -->
+            <li>
+                <button id="randomColorBtn">随机背景</button><br>
+            </li>
+            <li>
+                上传背景<input type="file" id="uploadImageBtn" accept="image/*">  
+            </li>
+            <li>
+                <button id="addSpriteBtn">添加精灵</button>
+            </li>
+            <li>
+                <button id="clearScreenBtn">清屏</button>
+            </li>
+            <li>
+                <button id="moveUpBtn">上移</button>
+            </li>
+          <button id="moveDownBtn">下移</button>
+          <input type="file" id="uploadSpriteBtn" accept="image/*">
+          <button id="controlBtn" onclick="minimizeControlPanel()">最小化面板</button>
+        </ul>
+    </div>
+    <button id="openBtn" class="controlBtn" onclick="openControlPanel()">打开面板</button>
+    <canvas id="canvas"></canvas>
+</body>
+<script src="./pixi-live2d-display/dist/Engine/live2dcubismcore.min.js"></script>
+<script src="./pixi-live2d-display/dist/Engine/live2d.min.js"></script>
+<script src="./pixi-live2d-display/dist/Engine/pixi.min.js"></script>
+<script src="./pixi-live2d-display/dist/Engine/index.min.js"></script>
+<script src="./pixi-live2d-display/dist/Engine/extra.min.js"></script>
+<script src="./scripts/ojisan.js"></script>
+<script src="./scripts/controlpannel.js"></script>
+<script src="./scripts/controlpannelsprite.js"></script>
+</html>

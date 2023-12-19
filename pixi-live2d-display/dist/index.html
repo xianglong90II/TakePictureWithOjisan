@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>live2d-display </title>
+  <!-- Developed using pixi-live2d-display library -->
+  <link rel="stylesheet" href="Engine/normalize.min.css">
+  <style>
+    body{
+      background-color:darkgray;
+    }
+  </style>
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <button onclick="playVol()">Click to speak</button>
+  <audio id="audio" src="./output.mp3"></audio>
+  <audio id="audiop" src="./output.mp3"></audio>
+
+<script src="Engine/live2dcubismcore.min.js"></script>
+<script src="Engine/live2d.min.js"></script>
+<script src="Engine/pixi.min.js"></script>
+<script src="Engine/index.min.js"></script>
+<script src="Engine/extra.min.js"></script>
+
+<canvas id="canvas"></canvas>
+
+<div id="control"></div>
+<script src="./script.js"></script>
+
+</body>
+</html>

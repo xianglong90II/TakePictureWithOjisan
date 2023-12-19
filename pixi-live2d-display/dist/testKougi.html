@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <title>testkougi</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+<script>
+var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+
+function updateText(text, x, y) {
+  // 清空矩形区域
+  ctx.clearRect(0, 0, 1000, 1000); 
+
+  // 绘制矩形
+  ctx.beginPath();
+  ctx.rect(0, 0, 1000, 1000);
+  ctx.fillStyle = 'lightgrey';
+  ctx.fill();
+ // 写入新文字
+  ctx.font="15px Microsoft Yahei"
+  ctx.fillStyle='black'
+  ctx.fillText(text, x, y); 
+}
+
+// 使用方法:
+updateText('New text', 20, 30);
+updateText('New tex', 20, 30);
+
+// 淡入淡出动画
+function fadeIn(text, x, y,fadeInDuration) {
+
+let fadeInTime = 0;
+
+// 淡入动画
+function fadeIn(time) {
+  ctx.globalAlpha = Math.min(1, time / fadeInDuration);
+  updateText(text, x, y);
+  
+  if(time < fadeInDuration) {
+    requestAnimationFrame(function(time) {
+      fadeInTime += time;
+      fadeIn(fadeInTime);  
+    });
+  }
+}
+fadeIn(0);
+}
+
+// 调用
+fadeIn('Hello', 20, 15, 1000);
+fadeIn('Hel', 20, 15, 1000);
+</script>
+</body>

@@ -1,0 +1,33 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "KusoProf.moc3",
+		"Textures": [
+			"KusoProf.1024/texture_00.png"
+		],
+		"Physics": "KusoProf.physics3.json",
+		"DisplayInfo": "KusoProf.cdi3.json"
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"ParamEyeLOpen",
+				"ParamEyeLSmile",
+				"ParamEyeROpen",
+				"ParamEyeRSmile",
+				"ParamBrowLAngle",
+				"ParamBrowRAngle"
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": [
+				"ParamMouthForm",
+				"ParamMouthOpenY"
+			]
+		}
+	]
+}
